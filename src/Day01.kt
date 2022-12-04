@@ -1,7 +1,6 @@
 import java.io.File
 
 fun main() {
-
     val maxNCalories = 3
 
     fun computeElvesCaloriesList(input: List<String>): List<Int> {
@@ -37,14 +36,13 @@ fun main() {
             .take(nCalories)
             .sum()
 
-
     // Alternate Idea
     val data = File("src/Day01_test.txt").readText()
     val s = data.split("\n\n").map { elf ->
         elf.lines().map { it.toInt() }.sum()
     }
     s.max()
-    
+
     // test if implementation meets criteria from the description, like:
     val testInput = readInput("Day01_test")
     println("checking test input for Max Elf calories ")
