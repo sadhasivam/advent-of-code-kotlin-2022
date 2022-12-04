@@ -1,3 +1,5 @@
+package org.sj.aoc2022.day02
+
 // Rock defeats Scissors, (A, X)
 // Paper defeats Rock     (B, Y)
 // Scissors defeats Paper,(C, Z)
@@ -52,29 +54,4 @@ fun rockPaperScissorWithStrategy(play: String): Int {
     }
     error("condition didn't met")
     // return resultMap[play.last()]!!
-}
-
-fun main() {
-    val testInput = readInput("Day02_test")
-    val a = testInput.map {
-        rcpMap[it.last()]!! + rockPaperScissor(it)
-    }.sumOf { it }
-    check(a == 15)
-
-    val input = readInput("Day02")
-    val answer = input.map {
-        rcpMap[it.last()]!! + rockPaperScissor(it)
-    }.sumOf { it }
-    check(answer == 11767)
-
-    val b = testInput.map {
-        resultMap[it.last()]!! + rockPaperScissorWithStrategy(it)
-    }.sumOf { it }
-    println(b)
-    check(b == 12)
-
-    val answer2 = input.map {
-        resultMap[it.last()]!! + rockPaperScissorWithStrategy(it)
-    }.sumOf { it }
-    println(answer2)
 }

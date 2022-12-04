@@ -9,9 +9,13 @@ repositories {
 tasks {
     sourceSets {
         main {
-            java.srcDirs("src")
+            kotlin.srcDirs("src/main/kotlin")
+        }
+        test {
+            kotlin.srcDirs("src/test/kotlin")
         }
     }
+
 
     wrapper {
         gradleVersion = "7.6"
